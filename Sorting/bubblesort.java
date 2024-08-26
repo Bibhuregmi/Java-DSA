@@ -21,9 +21,16 @@ public class bubblesort {
                     sorted = true;
                 }
             }
-            if (!sorted) {
+            if (!sorted) { // sorted = true; loop ends meaning no more comparison.
                 break;
             }
         }
     }
 }
+
+/*
+ * Bubble sort -> Comparison sort method also known as Syncing sort and Exchange
+ * sort.
+ * On each iteration, the largest value comes to the last index.
+ * No comparison required once the array is sorted.
+ */
