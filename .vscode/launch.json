@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "duplicatenumber",
+            "request": "launch",
+            "mainClass": "Leetcode.duplicatenumber",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
             "name": "allmissingnumber",
             "request": "launch",
             "mainClass": "Leetcode.allmissingnumber",
