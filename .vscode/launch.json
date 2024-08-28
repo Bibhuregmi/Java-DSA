@@ -1,0 +1,350 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "binarysearch",
+            "request": "launch",
+            "mainClass": "Arrays.binarysearch",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "cellingofatragert",
+            "request": "launch",
+            "mainClass": "Arrays.cellingofatragert",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "infinitenum",
+            "request": "launch",
+            "mainClass": "Arrays.infinitenum",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "lastoccurance",
+            "request": "launch",
+            "mainClass": "Arrays.lastoccurance",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "linearserach",
+            "request": "launch",
+            "mainClass": "Arrays.linearserach",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "matrix",
+            "request": "launch",
+            "mainClass": "Arrays.matrix",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "matrixbinarysearch",
+            "request": "launch",
+            "mainClass": "Arrays.matrixbinarysearch",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "maxvalue",
+            "request": "launch",
+            "mainClass": "Arrays.maxvalue",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "minimumvalue",
+            "request": "launch",
+            "mainClass": "Arrays.minimumvalue",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "mountainHard",
+            "request": "launch",
+            "mainClass": "Arrays.mountainHard",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "reversearr",
+            "request": "launch",
+            "mainClass": "Arrays.reversearr",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "swapvalues",
+            "request": "launch",
+            "mainClass": "Arrays.swapvalues",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "Arrays.test",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "twodarrsearch",
+            "request": "launch",
+            "mainClass": "Arrays.twodarrsearch",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "factorial",
+            "request": "launch",
+            "mainClass": "Functions.factorial",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "productfunction",
+            "request": "launch",
+            "mainClass": "Functions.productfunction",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "sumfunction",
+            "request": "launch",
+            "mainClass": "Functions.sumfunction",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "HalfPyramid",
+            "request": "launch",
+            "mainClass": "HalfPyramid",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "Hollow",
+            "request": "launch",
+            "mainClass": "Hollow",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "InverseHalfPyramid",
+            "request": "launch",
+            "mainClass": "InverseHalfPyramid",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "InverseRotatedhalfpyramid",
+            "request": "launch",
+            "mainClass": "InverseRotatedhalfpyramid",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "EvendigitsArr",
+            "request": "launch",
+            "mainClass": "Leetcode.EvendigitsArr",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "MaxWealth",
+            "request": "launch",
+            "mainClass": "Leetcode.MaxWealth",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "RotatedBS",
+            "request": "launch",
+            "mainClass": "Leetcode.RotatedBS",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "lastandfirstposition",
+            "request": "launch",
+            "mainClass": "Leetcode.lastandfirstposition",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "missingNumber",
+            "request": "launch",
+            "mainClass": "Leetcode.missingNumber",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "qsevenfourtyfour",
+            "request": "launch",
+            "mainClass": "Leetcode.qsevenfourtyfour",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "searchInsertposition",
+            "request": "launch",
+            "mainClass": "Leetcode.searchInsertposition",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "sixtyNine",
+            "request": "launch",
+            "mainClass": "Leetcode.sixtyNine",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "sqrt",
+            "request": "launch",
+            "mainClass": "Leetcode.sqrt",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "twoSum",
+            "request": "launch",
+            "mainClass": "Leetcode.twoSum",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "OItriangle",
+            "request": "launch",
+            "mainClass": "OItriangle",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "TicTacToe",
+            "request": "launch",
+            "mainClass": "Projects.TicTacToe",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "SolidRectangle",
+            "request": "launch",
+            "mainClass": "SolidRectangle",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "bubblesort",
+            "request": "launch",
+            "mainClass": "Sorting.bubblesort",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "cyclicsort",
+            "request": "launch",
+            "mainClass": "Sorting.cyclicsort",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "insertionsort",
+            "request": "launch",
+            "mainClass": "Sorting.insertionsort",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "selectionsort",
+            "request": "launch",
+            "mainClass": "Sorting.selectionsort",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "butterflypattern",
+            "request": "launch",
+            "mainClass": "butterflypattern",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "first",
+            "request": "launch",
+            "mainClass": "first",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "floydstriangle",
+            "request": "launch",
+            "mainClass": "floydstriangle",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "invertednumberpyramid",
+            "request": "launch",
+            "mainClass": "invertednumberpyramid",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "loops",
+            "request": "launch",
+            "mainClass": "loops",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "nepalflag",
+            "request": "launch",
+            "mainClass": "nepalflag",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "numberpyramid",
+            "request": "launch",
+            "mainClass": "numberpyramid",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "palindromicNumpyramid",
+            "request": "launch",
+            "mainClass": "palindromicNumpyramid",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "solidrhombus",
+            "request": "launch",
+            "mainClass": "solidrhombus",
+            "projectName": "Java_4a4284f4"
+        },
+        {
+            "type": "java",
+            "name": "stardiamond",
+            "request": "launch",
+            "mainClass": "stardiamond",
+            "projectName": "Java_4a4284f4"
+        }
+    ]
+}
