@@ -3,7 +3,7 @@ package String;
 public class palindrome {
 
     public static void main(String[] args) {
-        String str = "abcdcba";
+        String str = "";
         System.out.println(ispalindrome(str));
 
     }
@@ -13,6 +13,10 @@ public class palindrome {
 
         char s = str.charAt(0);
         char e = str.charAt(str.length() - 1);
+
+        if (str.length() == 0 || str == null) {
+            return true;
+        }
         while (s < e) {
             if (s != e) {
                 return false;
