@@ -28,5 +28,12 @@ public class fibonacci {
  * stack and how they are returning the value.
  * Identify the number of function calls and focus on the flow of left and right
  * tree calls.
- * 
+ */
+
+/*
+ * There are two type of recurrance relation 1. Linear which is applicable for
+ * this example and another
+ * is 2. Divide and conquer (Binary search). In the case of Linear recurrance
+ * relation for Fibonacci sequence
+ * it is not so optimised and really slow.
  */
