@@ -1,5 +1,6 @@
 package Leetcode;
 
+// https://leetcode.com/problems/sqrtx/description/
 public class sqrt {
     public static void main(String[] args) {
 
