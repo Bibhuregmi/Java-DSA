@@ -2,7 +2,7 @@ package Leetcode;
 
 public class findmissingpositive {
     public static void main(String[] args) {
-        int nums[] = { 1 };
+        int nums[] = { 3, 4, -1, 1 };
         System.out.println(firstMissingPositive(nums));
 
     }
@@ -13,7 +13,7 @@ public class findmissingpositive {
 
         while (i < n) {
             int correctIdx = nums[i] - 1;
-            if (nums[i] > 0 && nums[i] < n && nums[i] != nums[correctIdx]) {
+            if (nums[i] > 0 && nums[i] != nums[correctIdx]) {
                 swap(nums, i, correctIdx);
             } else {
                 i++;
