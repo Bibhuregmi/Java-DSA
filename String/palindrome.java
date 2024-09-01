@@ -3,7 +3,7 @@ package String;
 public class palindrome {
 
     public static void main(String[] args) {
-        String str = "";
+        String str = "10";
         System.out.println(ispalindrome(str));
 
     }
