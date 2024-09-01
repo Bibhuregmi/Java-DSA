@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/richest-customer-wealth/description/
+//https://leetcode.com/problems/richest-customer-wealth/description/
 package Leetcode;
 
 public class MaxWealth {
