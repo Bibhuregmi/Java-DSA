@@ -1,4 +1,4 @@
-//Question Link:https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/
+//https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/
 
 package Leetcode;
 
