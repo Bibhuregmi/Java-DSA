@@ -1,4 +1,4 @@
-package Array;
+package Leetcode;
 
 //https://leetcode.com/problems/find-in-mountain-array/description/
 public class mountainHard {
