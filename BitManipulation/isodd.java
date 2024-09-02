@@ -24,4 +24,7 @@ public class isodd {
  * Then, 11000 & 00001 != 1 ( 0 & 1 == 0) so it returns false. Hence, 24 is even
  * not odd.
  * Hence if (n & 1 == 1) then the number is odd else even.
+ * 
+ * In simple term, if Least Significant Bit (last digit of a binary number) is 1
+ * then the number is Odd and if it is 0 then the number is Even.
  */
