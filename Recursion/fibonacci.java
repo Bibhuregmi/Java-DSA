@@ -3,7 +3,11 @@ package Recursion;
 public class fibonacci {
 
     public static void main(String[] args) {
-        System.out.println(fibo(4));
+        for (int i = 0; i < 15; i++) {
+            System.out.println(fiboFormula(i));
+        }
+        // Gives the 15 fibonacci numbers.
+
     }
 
     public static int fibo(int n) {
@@ -12,6 +16,12 @@ public class fibonacci {
         }
         return (fibo(n - 1) + fibo(n - 2));
     }
+
+    static int fiboFormula(int n) {
+        return (int) Math.round(Math.pow(((1 + Math.sqrt(5)) / 2), n) / Math.sqrt(5));
+    }
+    // This is the formula to calculate the fibonnaci number in the sequence with
+    // out using recursion.
 }
 
 /*
