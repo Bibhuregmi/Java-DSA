@@ -4,8 +4,10 @@ public class powoftwo {
 
     public static void main(String[] args) {
 
-        int n = 8;
+        int n = 64;
         boolean ans = (n & (n - 1)) == 0;
+        if (n == 0)
+            ans = false; // case if n = 0 returns false.
         System.out.println(ans);
     }
 }
