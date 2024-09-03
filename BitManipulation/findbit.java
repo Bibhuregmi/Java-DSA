@@ -24,4 +24,10 @@ public class findbit {
  * the help of right shift.
  * 
  * 00010000 >> 4 -> 0001 -> 1.
+ * 
+ * Similarly, another value of n = 7;
+ * bitmask = 1 << (7-1) -> 1 << 6 -> 1000000 -> 01000000
+ * (10110110)
+ * &(01000000) -> (00000000) >> 6 -> 0.
+ * 
  */
