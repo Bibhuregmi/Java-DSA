@@ -4,19 +4,20 @@ package BitManipulation;
 public class countsetbit {
 
     public static void main(String[] args) {
-        int num = 7;
+        int n = 7;
         int count = 0;
-        System.out.println(FirstApproach(num, count));
-        System.out.println(SecondApproach(num, count));
+        System.out.println(Integer.toBinaryString(n));
+        System.out.println(FirstApproach(n, count));
+        System.out.println(SecondApproach(n, count));
 
     }
 
-    static int FirstApproach(int num, int count) {
-        while (num > 0) {
-            if ((num & 1) == 1) {
+    static int FirstApproach(int n, int count) {
+        while (n > 0) {
+            if ((n & 1) == 1) {
                 count++;
             }
-            num = num >> 1;
+            n = n >> 1;
         }
         return count;
     }
