@@ -1,4 +1,5 @@
 **Data Structures and Algorithms Progress**
+______________________________________________________
 Welcome to this repository! 
 This repo is dedicated to tracking my progress in learning Data Structures and Algorithms (DSA) using Java. 
 Here, you’ll find various implementations and solutions to problems I’ve tackled, along with explanations and insights.
