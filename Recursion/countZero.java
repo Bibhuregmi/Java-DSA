@@ -7,7 +7,9 @@ public class countZero {
     }
 
     static int count(int n) {
-        return helper(n, 0); // (taking the helper function which takes number and the count in its argument)
+        return helper(n, 0); // (taking the helper function which takes number and the count in its argument.
+                             // Since, it is called here, the value of the count will update here after the
+                             // value has been passed by the return)
     }
 
     static int helper(int n, int c) {
