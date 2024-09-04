@@ -8,7 +8,9 @@ public class recur {
         // RevRecur(5);
         // BothRecur(5);
         int ans = factorial(5);
+        int sumAns = sum(100);
         System.out.println(ans);
+        System.out.println(sumAns);
     }
 
     static void Recur(int n) {
@@ -46,5 +48,13 @@ public class recur {
             return 1;
         }
         return n * factorial(n - 1); // it will return the interger value.
+    }
+
+    // Sum of the numbers can also be calculated
+    static int sum(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return n + sum(n - 1);
     }
 }
