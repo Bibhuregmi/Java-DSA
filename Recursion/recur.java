@@ -6,7 +6,9 @@ public class recur {
         // Recur(5);
         // System.out.println();
         // RevRecur(5);
-        BothRecur(5);
+        // BothRecur(5);
+        int ans = factorial(5);
+        System.out.println(ans);
     }
 
     static void Recur(int n) {
@@ -34,5 +36,15 @@ public class recur {
         System.out.println(n);
         BothRecur(n - 1);
         System.out.println(n);
+    }
+
+    // Program to find the factorial of a number.
+    // Here int is the return type cause it will be returning a value to the
+    // function it was called.
+    static int factorial(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return n * factorial(n - 1); // it will return the interger value.
     }
 }
