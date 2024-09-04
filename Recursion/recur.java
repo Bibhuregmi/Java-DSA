@@ -7,10 +7,11 @@ public class recur {
         // System.out.println();
         // RevRecur(5);
         // BothRecur(5);
-        int ans = factorial(5);
-        int sumAns = sum(100);
-        System.out.println(ans);
-        System.out.println(sumAns);
+        // int ans = factorial(5);
+        // int sumAns = sum(100);
+        // System.out.println(ans);
+        // System.out.println(sumAns);
+        fun(5);
     }
 
     static void Recur(int n) {
@@ -57,4 +58,25 @@ public class recur {
         }
         return n + sum(n - 1);
     }
+
+    static void fun(int n) {
+        if (n == 0) {
+            return;
+        }
+        System.out.println(n);
+        // fun(n--);
+        fun(--n);
+    }
+    /*
+     * Here is the difference between (n--) & (--n).
+     * In (n--), the value of n is passed before subtracting it but for (--n),
+     * First the value is subtracted and n is passed.
+     *
+     * This cause the change of the recursive behaviour, in the case of
+     * (n--), value is passed before decreasing it so recursion uses orignal value
+     * before decreasing the value causing the repeating of the value in output and
+     * eventually stackoverflow.
+     * But for the (--n), the value is decreased before passing the value and
+     * outputs as 5 4 3 2 1.
+     */
 }
