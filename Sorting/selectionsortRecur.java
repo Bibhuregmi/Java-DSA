@@ -35,3 +35,11 @@ public class selectionsortRecur {
  * found because in selection sort, max element is swapped with the element in
  * the last index of the array.
  */
+
+/*
+ * Which is better Iterative or Recrsive way of Bubble and Selection sort?
+ * -> In the context of the recursive way of bubble and selection sort, it is
+ * less memory efficient beacause it uses O(n) space due to the use of recursive
+ * call stack which is not ideal for the practical and large scale application.
+ * Hence, iterative way is more prefered rather than the recursive way.
+ */
