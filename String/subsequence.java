@@ -1,26 +1,46 @@
 package String;
 
+import java.util.ArrayList;
+
 public class subsequence {
 
     public static void main(String[] args) {
-        subsequence(" ", "abcd");
+        System.out.println(subsequence(" ", "abcd"));
+
     }
 
-    static void subsequence(String e, String str) {
+    static ArrayList<String> subsequence(String e, String str) {
         if (str.isEmpty()) {
-            System.out.println(e);
-            return;
+            ArrayList<String> list = new ArrayList<>();
+            list.add(e);
+            return list;
         }
         char ch = str.charAt(0);
-        subsequence(e + ch, str.substring(1));
-        subsequence(e, str.substring(1));
+        ArrayList<String> left = subsequence(e + ch, str.substring(1));
+        ArrayList<String> right = subsequence(e, str.substring(1));
+
+        left.addAll(right);
+        return left;
     }
 }
 /*
- * This program gives the subsequence of a string. Function takes two arguments,
- * empty string 'e' and a string 'str' whose subsequence is to be found. In two
- * recusive calls, one will add the first character of the string in the empty
- * string and another will just ignore the character. When the original string
- * is empty we will have all the subsequences stored in the empty string of each
- * recursive call.
+ * Base Case:
+ * - If the input string `str` is empty, the method creates a new `ArrayList`,
+ * adds the current subsequence `e` to it, and returns this list. This
+ * represents the end of a branch in the recursion tree where no more characters
+ * are left to process.
+ * Recursive Case:
+ * - The method processes the first character of `str`, which is stored in `ch`.
+ * - It recursively generates all subsequences including this character by
+ * calling `subsequence(e + ch, str.substring(1))`. This updates `e` by adding
+ * `ch` and processes the remaining string.
+ * - It recursively generates all subsequences excluding this character by
+ * calling `subsequence(e, str.substring(1))`. This keeps `e` unchanged and
+ * processes the remaining string.
+ * Combining Results:
+ * - The results from the two recursive calls (`left` and `right`) are combined.
+ * `left` contains all subsequences that include the current character `ch`,
+ * while `right` contains all subsequences that do not include `ch`.
+ * - The method adds all subsequences from `right` to the `left` list and
+ * returns this combined list.
  */
