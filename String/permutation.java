@@ -5,15 +5,15 @@ import java.util.ArrayList;
 public class permutation {
 
     public static void main(String[] args) {
-        ArrayList<String> result = new ArrayList<>(permutation("", "abc"));
+        ArrayList<String> result = new ArrayList<>(permutation("", "abcd", 1));
         System.out.println(result);
     }
 
-    static ArrayList<String> permutation(String e, String str) {
+    static ArrayList<String> permutation(String e, String str, int c) {
 
         if (str.isEmpty()) {
             ArrayList<String> list = new ArrayList<>();
-            list.add(e);
+            list.add(e + ": " + c);
             return list;
         }
         char ch = str.charAt(0);
@@ -22,7 +22,13 @@ public class permutation {
         for (int i = 0; i <= e.length(); i++) {
             String f = e.substring(0, i);
             String s = e.substring(i, e.length());
-            ans.addAll(permutation(f + ch + s, str.substring(1)));
+            ans.addAll(permutation(f + ch + s, str.substring(1), c));
+            c += permutation(f + ch + s, str.substring(1), c).size();
+            // ^^ Here since, c being int and our return type being ArrayList, we can't
+            // directly add them together so the logical way is that we
+            // need to add the size of the list returned by permutation() to increse the
+            // count.
+            // and the list starts form index 0, we start our count from 1.
         }
         return ans;
 
