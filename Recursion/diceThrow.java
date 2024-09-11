@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class diceThrow {
 
     public static void main(String[] args) {
-        dice(" ", 4);
-        System.out.println(diceComb(" ", 5));
+        // dice(" ", 4);
+        System.out.println(diceComb(" ", 4));
     }
 
     static void dice(String e, int target) {
@@ -14,7 +14,7 @@ public class diceThrow {
             System.out.println(e);
             return;
         }
-        for (int i = 1; i <= target; i++) {
+        for (int i = 1; i <= 6 && i <= target; i++) {
             dice(e + i, target - i);
         }
     }
@@ -26,7 +26,7 @@ public class diceThrow {
             return list;
         }
         ArrayList<String> ans = new ArrayList<>();
-        for (int i = 1; i <= target; i++) {
+        for (int i = 1; i <= 6 && i <= target; i++) {
             ans.addAll(diceComb(e + i, target - i));
 
         }
