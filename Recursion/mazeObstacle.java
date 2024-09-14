@@ -18,6 +18,7 @@ public class mazeObstacle {
         if  (arr[r] [c] == false){ //If it inconuters any obstacle meaning "false" in a boolean matrix, simply it will return. 
             return; 
         }
+        arr[r] [c] = false; //Marking every cell to false for the path it has found. 
         if (r < arr.length -1 ){  //Condtion to move down the row
             obstacles(e + "D", arr, r+1, c);
         }
@@ -36,8 +37,13 @@ public class mazeObstacle {
             obstacles(e + "L", arr, r, c-1);
         }
 
-        //  After running this program, it goes to stack overflow because program will keep going to the starting position and base case will never hit. 
+        arr [r] [c] = true; //Reverting back so that other path can be found. 
 
+        //  After running this program, it goes to stack overflow because program will keep going to the starting position and base case will never hit. 
+        // Here now comes the concept of backtracking. so at first for that I will just mark every cell it has gone to false so that, 
+        // no call is made for that function. And at the end of the function, I will revert it back to true so that other path can be found. 
+        // So this is the basic concept of the backtracking where an object is modified in the function call and later brought back to its 
+        // original condition.
     
     }
 }
