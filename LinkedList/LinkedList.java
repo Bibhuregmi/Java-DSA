@@ -23,6 +23,37 @@ public class LinkedList {
         }
         size += 1; //Increasing the size of the LinkedList
     }
+
+    public void insertLast(int val){
+        if(tail == null){
+            insert(val);
+            return;
+        }
+        Node node = new Node(val);
+        tail.next = node;
+        tail = node; 
+        size++;
+    }
+
+    public void insertAtIndex(int val, int index){
+        if (index == 0 ){
+            insert(val);
+            return;
+        }
+        if (index == size){
+            insertLast(val);
+            return; 
+        }
+
+        Node temp = head;
+        for(int i =0; i< index-1; i++){
+            temp = temp.next; 
+        }
+
+        Node node = new Node(val, temp.next);
+        temp.next = node;
+        size++;
+    }
     /*
      * To display the values present in the linked list, we need to create a temp node which points toward
      * head because, here we will not modify the head beacause changing head wil disrupt the structure of 
