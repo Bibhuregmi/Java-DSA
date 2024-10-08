@@ -6,9 +6,9 @@ package LinkedList;
  */
 public class LinkedList {
     
-    private Node head; //Reference to the first node in the list
-    private Node tail; //Reference to the last node in the list
-    private int size; //For keeping track of the number of elements in the list 
+     static Node head; //Reference to the first node in the list
+     Node tail; //Reference to the last node in the list
+        int size; //For keeping track of the number of elements in the list 
 
     public LinkedList(){
         this.size = 0; //Constructs the LinkedList of size 0 during initialization
@@ -123,10 +123,21 @@ public class LinkedList {
         }
         System.out.println("null");
     }
-    /*
+    //Recursive function to insert a node at the certain index
+    public void insertRecursive(Node head, int index, int value, int counter){ //here head is just the reference and the head of the list wont change
+        if (counter == index -1){ //base case, recursion stops when it reaches the node at index-1
+            Node node = new Node(value);//creating the new node
+            node.next = head.next; //new node pointing to the node at "index+1" position
+            head.next = node; //completing insertion after linking the node at current index with the new node. 
+            return;
+        }
+        insertRecursive(head.next, index, value, counter+1); //on each call head moves to next and counter increases till base case hits
+
+    }
+/*
  * This class represents each node in linked list which contain value and the reference to the next node
 */
- private class Node{ //{Changed the Node class to the private inner class so that no other external classes can interact directly to the Node class}
+ public class Node{ 
     int value; //data stored in the node
     Node next; // reference to the next node
 
@@ -145,5 +156,19 @@ public class LinkedList {
         return "Node{" + "vaule=" + value + "}";
     }
 }
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+
+        list.insert(5);
+        list.insert(5);
+        list.insert(4);
+        list.insert(3);
+        list.insert(3);
+        list.insert(3);
+        list.insert(2);
+        list.insertRecursive(head, 2, 10, 0);
+        list.insertRecursive(head, 6, 10, 0);
+        list.display();
+    }
     
 }
