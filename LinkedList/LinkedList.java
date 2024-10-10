@@ -134,6 +134,32 @@ public class LinkedList {
         insertRecursive(head.next, index, value, counter+1); //on each call head moves to next and counter increases till base case hits
 
     }
+    //Recursive method to reverse a singly linked list
+    public void reverseList (Node node){
+        if (node == tail){ //base case: if the node reaches tail, tail becomes head
+            head = tail; 
+            return; 
+        }
+        reverseList(node.next); //recursive call, calling the next node
+        //This executes when the call is coming out of the stack
+        tail.next = node; //tail points to the node
+        tail = node; //node becomes the tail
+        tail.next = null; // and it points to the null
+    }
+    //In-place method of the reversing the linked list (Most Important)
+    public Node reverse(Node head){
+        Node previous = null; 
+        Node current = head; 
+        Node next = null; 
+
+        while (current != null){
+            next = current.next; 
+            current.next = previous; 
+            previous = current; 
+            current = next; 
+        }
+        return previous;
+    }
 /*
  * This class represents each node in linked list which contain value and the reference to the next node
 */
@@ -168,6 +194,8 @@ public class LinkedList {
         list.insert(2);
         list.insertRecursive(head, 2, 10, 0);
         list.insertRecursive(head, 6, 10, 0);
+        list.display();
+        list.reverse(head);
         list.display();
     }
     
