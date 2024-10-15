@@ -27,8 +27,8 @@ class circularQueue {
             System.out.println("Queue is full");
             return false; 
         }
-        data[end] = item; 
-        end = (end +1) % capacity; //circular increment of the end pointer
+        data[end++] = item; 
+        end = end % data.length; //circular increment of the end pointer
         size++;
         return true; 
     }
@@ -37,8 +37,8 @@ class circularQueue {
         if(isEmpty()){
             throw new Exception("Queue is empty"); 
         }
-        int item = data[front]; //geting the item form the front of the queue
-        front = (front +1) % capacity;//circular increment of the front pointer
+        int item = data[front++]; //geting the item form the front of the queue
+        front = front % data.length;//circular increment of the front pointer
         size--; 
         return item; 
     }
