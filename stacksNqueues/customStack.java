@@ -35,14 +35,29 @@ public class customStack {
         return data[pointer];
     }
     //other methods
-    private boolean isFull(){ 
+    public boolean isFull(){ 
         return pointer == data.length-1; 
     }
-    private boolean isEmpty(){
+    public boolean isEmpty(){
         return pointer == -1; 
+    }
+
+    public static void main(String[] args) throws Exception {
+        customStack stack = new dynamicStack(); //since dynamicStack inherits all properties of the customStack, every dynamicStack is an object of a customStack so it is valid
+        stack.push(4);
+        stack.push(4);//calls dynamicStack's push 
+        stack.push(6);
+        stack.push(7);
+        stack.push(2);
+        stack.push(42);
+        System.out.println(stack.pop()); //calls dynamicStack's pop()
     }
 }
 
+/*
+ * Insertion : O(1)
+ * Deletion : O (1)
+ */
 
 
 
