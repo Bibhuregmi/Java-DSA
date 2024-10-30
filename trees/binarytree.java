@@ -65,11 +65,52 @@ class binarytree {
        }
        display(node.left, level+1); //displaying left subtree
     }
-
+    //preorder traversal method in binary tree
+    public void preOrder(){
+        preOrder(root);
+    }
+    private void preOrder(Node node){
+        if (node == null){
+            return;
+        }
+        System.out.println(node.value + " ");
+       preOrder(node.left);
+       preOrder(node.right);
+    }
+    //inorder traversal in binary tree
+    public void inOrder(){
+        inOrder(root);
+    }
+    private void inOrder(Node node){
+        if (node == null){
+            return;
+        }
+        inOrder(node.left);
+        System.out.println(node.value + " ");
+        inOrder(node.right);
+    }
+    //postorder traversal in binary tree
+    public void postOrder(){
+        postOrder(root);
+    }
+    private void postOrder(Node node){
+        if (node == null){
+            return; 
+        }
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.value + " ");
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         binarytree tree = new binarytree();
         tree.populate(sc);
         tree.display();
+        System.out.println("Pre Order Traversal N->L->R:");
+        tree.preOrder();
+        System.out.println("Post Order Traversal L->R->N:");
+        tree.postOrder();
+        System.out.println("In Order Traversal L->N->R:");
+        tree.inOrder();
     }
 } 
