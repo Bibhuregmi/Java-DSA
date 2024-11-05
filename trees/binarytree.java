@@ -1,3 +1,7 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 class binarytree {
@@ -101,16 +105,45 @@ class binarytree {
         postOrder(node.right);
         System.out.println(node.value + " ");
     }
+    List<List<Integer>> BreadthFirstSearch(){
+        List<List<Integer>> result = new ArrayList<>(); //list of list of integer to store the value of each on level
+
+        if (root == null){ 
+            return result; 
+        }
+        Queue<Node> q = new LinkedList<Node>(); //using queue to process the each value of the node in the level, remove the current node value and add the value of the next level
+        q.offer(root); //starting by adding root value to queue
+        //loop logic is that, loop runs till our queue becomes empty, meaning no more node values to process
+        while(!q.isEmpty()){
+            List<Integer> nodeValue = new ArrayList<>(); //creating a new list that has all the nodevalue
+            int levelSize = q.size(); //the current size of the queue is always equal to the total number of nodes in that level. 
+            //esuring that nodes at current level are only processed
+            for(int i=0; i < levelSize; i++){
+                Node currentNode = q.poll(); //removing current value form the start of the queue
+                nodeValue.add(currentNode.value); // and adding the value to the list
+                //checking both  left and right childern of the node and adding that value to the queue to be processed. 
+                if (currentNode.left != null){
+                    q.offer(currentNode.left);
+                }
+                if (currentNode.right != null){
+                    q.offer(currentNode.right); 
+                } 
+            }
+            result.add(nodeValue); //after each level has been processed, adding each list to the result list
+        }
+        return result; 
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         binarytree tree = new binarytree();
         tree.populate(sc);
         tree.display();
-        System.out.println("Pre Order Traversal N->L->R:");
-        tree.preOrder();
-        System.out.println("Post Order Traversal L->R->N:");
-        tree.postOrder();
-        System.out.println("In Order Traversal L->N->R:");
-        tree.inOrder();
+        // System.out.println("Pre Order Traversal N->L->R:");
+        // tree.preOrder();
+        // System.out.println("Post Order Traversal L->R->N:");
+        // tree.postOrder();
+        // System.out.println("In Order Traversal L->N->R:");
+        // tree.inOrder();
+        System.out.println(tree.BreadthFirstSearch()); 
     }
 } 
