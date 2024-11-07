@@ -133,6 +133,45 @@ class binarytree {
         }
         return result; 
     }
+
+    public boolean isCousin(Node root, int x, int y){
+        Node xNode = findNode(root,x);
+        Node yNode = findNode(root,y);
+        return(
+            (calculateLevel(root,xNode,0) == calculateLevel(root,yNode,0)) && (!isSibling(root,xNode,yNode))
+        );
+    }
+    public Node findNode(Node node, int x){
+        if (node == null){
+            return null;
+        }
+        if (node.value == x){
+            return node; 
+        }
+        Node n = findNode(node.left, x);
+        if (n != null){
+            return n;
+        }
+        return findNode(node.right, x);
+    }
+    public int calculateLevel(Node node, Node x, int level){
+        if (node == null){
+            return 0; 
+        }
+        int n = calculateLevel(node.left, x, level+1);
+        if (n !=0){
+            return n; 
+        }
+        return calculateLevel(node.right, x, level+1); 
+    }
+    public boolean isSibling(Node node, Node x, Node y){
+        if (node == null){
+            return false; 
+        }
+        return(
+            (node.left == x && node.right == y) || (node.left == y && node.right == x) ||  (isSibling(node.left, x, y) && isSibling(node.right, x, y))
+        );
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         binarytree tree = new binarytree();
