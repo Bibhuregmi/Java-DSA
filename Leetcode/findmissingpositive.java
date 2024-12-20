@@ -13,7 +13,7 @@ public class findmissingpositive {
 
         while (i < n) {
             int correctIdx = nums[i] - 1;
-            if (nums[i] > 0 && nums[i] != nums[correctIdx]) {
+            if (nums[i] > 0 && nums[i] != nums[correctIdx]) { //nums[i] > 0 it ensures no negative value are evaluated which is totally irrelevant in our current case. 
                 swap(nums, i, correctIdx);
             } else {
                 i++;
